@@ -1,0 +1,40 @@
+
+<section>
+  <section>
+    <h3>Simplicity Matters</h3>
+    <p>In C:
+      <pre><code data-trim="data-trim">#include <stdio.h>  /* printf */
+#include <stddef.h> /* size_t */
+#include <stdlib.h> /* EXIT_SUCCESS */
+
+int main (void)
+{
+    size_t i;
+    int    array[] = {1, 1, 2, 3, 5, 8, 13, 21};
+
+    for (i=0; i<(sizeof array/sizeof(int)); i++)
+    {
+        printf("The next number is: %2d\n", array[i]);
+    }
+    
+    return EXIT_SUCCESS;
+}</code></pre>
+    </p>
+    <p>In Python:
+      <pre><code data-trim="data-trim">for number in (1, 1, 2, 3, 5, 8, 13, 21):
+    print("The next number is: {:>2}".format(number))
+</code></pre>
+    </p>
+  </section>
+  <section>
+    <h3>Both has the same output:</h3>
+    <pre><code class="nohighlight">The next number is:  1
+The next number is:  1
+The next number is:  2
+The next number is:  3
+The next number is:  5
+The next number is:  8
+The next number is: 13
+The next number is: 21</code></pre>
+  </section>
+</section>
